@@ -28,7 +28,11 @@ let project = Project(
             infoPlist: .default,
             sources: ["SwiftKentbeckTDD/Tests/**"],
             resources: [],
-            dependencies: [.target(name: "SwiftKentbeckTDD")]
+            dependencies: [
+                .target(name: "SwiftKentbeckTDD"),
+                .external(name: "Quick"),
+                .external(name: "Nimble"),
+            ]
         ),
     ]
 )
