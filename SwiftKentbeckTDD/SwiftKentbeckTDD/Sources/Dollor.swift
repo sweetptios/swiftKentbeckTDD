@@ -5,7 +5,8 @@ final class Dollor {
         self.amount = value
     }
 
-    func times(_ multiplier: Int) {
+    func times(_ multiplier: Int) -> Dollor {
         amount *= multiplier
+        return Dollor(0)
     }
 }
