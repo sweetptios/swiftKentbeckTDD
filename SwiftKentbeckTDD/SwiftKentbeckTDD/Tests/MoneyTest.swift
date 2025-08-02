@@ -7,7 +7,7 @@ final class MoneyTest: AsyncSpec {
 
     override class func spec() {
 
-        it("testMultiplication") {
+        it("test multiplication") {
             let five = Dollor(5)
             var product = five.times(2)
             expect(product.amount).to(equal(10))
