@@ -9,7 +9,7 @@ class Money {
         fatalError()
     }
 
-    static func dollor(_ amount: Int) -> Dollor {
+    static func dollor(_ amount: Int) -> Money {
         Dollor(amount)
     }
 
