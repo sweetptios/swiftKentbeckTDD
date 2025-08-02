@@ -14,5 +14,9 @@ final class MoneyTest: AsyncSpec {
             product = five.times(3)
             expect(product.amount).to(equal(15))
         }
+
+        it("test equally") {
+            expect(Dollor(5) == Dollor(5)).to(beTrue())
+        }
     }
 }
