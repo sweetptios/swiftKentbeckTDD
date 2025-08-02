@@ -1,5 +1,5 @@
 final class Dollor {
-    private(set) var amount: Int
+    private let amount: Int
 
     init(_ value: Int) {
         self.amount = value
