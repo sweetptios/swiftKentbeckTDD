@@ -9,10 +9,8 @@ final class MoneyTest: AsyncSpec {
 
         it("test multiplication") {
             let five = Dollor(5)
-            var product = five.times(2)
-            expect(product.amount).to(equal(10))
-            product = five.times(3)
-            expect(product.amount).to(equal(15))
+            expect(five.times(2)).to(equal(Dollor(10)))
+            expect(five.times(3)).to(equal(Dollor(15)))
         }
 
         it("test equally") {
