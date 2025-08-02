@@ -5,3 +5,11 @@ class Money {
         self.amount = value
     }
 }
+
+// MARK: - Equatable
+
+extension Money: Equatable {
+    static func == (lhs: Money, rhs: Money) -> Bool {
+        return lhs.amount == rhs.amount
+    }
+}
