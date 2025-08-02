@@ -18,6 +18,7 @@ final class MoneyTest: AsyncSpec {
             expect(Dollor(5) == Dollor(6)).to(beFalsy())
             expect(Franc(5) == Franc(5)).to(beTrue())
             expect(Franc(5) == Franc(6)).to(beFalsy())
+            expect(Franc(5)).notTo(equal(Dollor(5)))
         }
 
         it("test franc multiplication") {
