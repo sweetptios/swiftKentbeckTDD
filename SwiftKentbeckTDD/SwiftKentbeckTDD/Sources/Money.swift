@@ -5,6 +5,10 @@ class Money {
         self.amount = value
     }
 
+    func times(_ multiplier: Int) -> Money {
+        fatalError()
+    }
+
     static func dollor(_ amount: Int) -> Dollor {
         Dollor(amount)
     }
