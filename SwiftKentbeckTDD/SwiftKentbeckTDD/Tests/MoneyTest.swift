@@ -16,15 +16,15 @@ final class MoneyTest: AsyncSpec {
         it("test equally") {
             expect(Money.dollor(5) == Money.dollor(5)).to(beTrue())
             expect(Money.dollor(5) == Money.dollor(6)).to(beFalsy())
-            expect(Franc(5) == Franc(5)).to(beTrue())
-            expect(Franc(5) == Franc(6)).to(beFalsy())
-            expect(Franc(5)).notTo(equal(Money.dollor(5)))
+            expect(Money.franc(5) == Money.franc(5)).to(beTrue())
+            expect(Money.franc(5) == Money.franc(6)).to(beFalsy())
+            expect(Money.franc(5)).notTo(equal(Money.dollor(5)))
         }
 
-        it("test franc multiplication") {
-            let five = Franc(5)
-            expect(five.times(2)).to(equal(Franc(10)))
-            expect(five.times(3)).to(equal(Franc(15)))
+        it("test Money.franc multiplication") {
+            let five = Money.franc(5)
+            expect(five.times(2)).to(equal(Money.franc(10)))
+            expect(five.times(3)).to(equal(Money.franc(15)))
         }
     }
 }
