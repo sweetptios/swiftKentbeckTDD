@@ -12,6 +12,10 @@ class Money {
     static func dollor(_ amount: Int) -> Dollor {
         Dollor(amount)
     }
+
+    static func franc(_ amount: Int) -> Money {
+        Franc(amount)
+    }
 }
 
 // MARK: - Equatable
