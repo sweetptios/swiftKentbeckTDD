@@ -14,6 +14,6 @@ final class Dollor {
 
 extension Dollor: Equatable {
     static func == (lhs: Dollor, rhs: Dollor) -> Bool {
-        true
+        lhs.amount == rhs.amount
     }
 }
