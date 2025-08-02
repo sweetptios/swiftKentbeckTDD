@@ -1,16 +1,16 @@
 // swift-tools-version: 6.0
 import PackageDescription
-import struct ProjectDescription.PackageSettings
-
-let packageSettings = PackageSettings(
-// Customize the product types for specific package product
-// Default is .staticFramework
-// productTypes: ["Alamofire": .framework,]
-    productTypes: [
-        "Quick": .framework,
-        "Nimble": .framework,
-    ]
-)
+//import struct ProjectDescription.PackageSettings
+//
+//let packageSettings = PackageSettings(
+//// Customize the product types for specific package product
+//// Default is .staticFramework
+//// productTypes: ["Alamofire": .framework,]
+//    productTypes: [
+//        "Quick": .framework,
+//        "Nimble": .framework,
+//    ]
+//)
 
 let package = Package(
     name: "SwiftKentbeckTDD",
