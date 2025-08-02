@@ -4,6 +4,10 @@ class Money {
     init(_ value: Int) {
         self.amount = value
     }
+
+    static func dollor(_ amount: Int) -> Dollor {
+        Dollor(amount)
+    }
 }
 
 // MARK: - Equatable
