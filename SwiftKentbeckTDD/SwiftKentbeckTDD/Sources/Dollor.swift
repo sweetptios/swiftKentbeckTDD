@@ -8,6 +8,7 @@ final class Dollor: Money {
 
 extension Dollor: Equatable {
     static func == (lhs: Dollor, rhs: Dollor) -> Bool {
-        lhs.amount == rhs.amount
+        let rhs: Money = rhs
+        return lhs.amount == rhs.amount
     }
 }
