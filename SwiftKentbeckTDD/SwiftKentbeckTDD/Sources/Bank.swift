@@ -1,14 +1,16 @@
 final class Bank {
+    private var rates = [Pair: Int]()
+
     func reduce(_ source: Expression, _ to: String) -> Money {
          source.reduce(self, to: to)
     }
 
     func rate(from: String, to: String) -> Int {
-        from == "CHF" && to == "USD" ? 2 : 1
+        rates[Pair(from: from, to: to)] ?? 0
     }
 
     func addRate(_ from: String, _ to: String, _ value: Int) {
-
+        rates[Pair(from: from, to: to)] = value
     }
 }
 
