@@ -11,7 +11,7 @@ class Money {
     }
 
     func times(_ multiplier: Int) -> Money {
-        fatalError()
+        Money(amount * multiplier, currency: _currency)
     }
 
     static func dollor(_ amount: Int) -> Money {
