@@ -16,6 +16,10 @@ class Money {
     static func franc(_ amount: Int) -> Money {
         Franc(amount)
     }
+
+    func currency() -> String {
+        fatalError()
+    }
 }
 
 // MARK: - Equatable
