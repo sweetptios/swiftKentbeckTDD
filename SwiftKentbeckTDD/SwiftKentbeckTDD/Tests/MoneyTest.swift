@@ -9,8 +9,8 @@ final class MoneyTest: AsyncSpec {
 
         it("test multiplication") {
             let five: Money = Money.dollor(5)
-            expect(five.times(2)).to(equal(Money.dollor(10)))
-            expect(five.times(3)).to(equal(Money.dollor(15)))
+            expect(five.times(2) as! Money).to(equal(Money.dollor(10)))
+            expect(five.times(3) as! Money).to(equal(Money.dollor(15)))
         }
 
         it("test equally") {
@@ -36,8 +36,8 @@ final class MoneyTest: AsyncSpec {
             let five = Money.dollor(5)
             let result: SwiftKentbeckTDD.Expression = five.plus(five)
             let sum = result as! Sum
-            expect(sum.augend).to(equal(five))
-            expect(sum.addend).to(equal(five))
+            expect(sum.augend as! Money).to(equal(five))
+            expect(sum.addend as! Money).to(equal(five))
         }
     }
 }
