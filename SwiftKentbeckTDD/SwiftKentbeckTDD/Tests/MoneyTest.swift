@@ -26,5 +26,10 @@ final class MoneyTest: AsyncSpec {
             expect(five.times(2)).to(equal(Money.franc(10)))
             expect(five.times(3)).to(equal(Money.franc(15)))
         }
+
+        it("test currency") {
+            expect(Money.dollor(1).currency()).to(equal("USD"))
+            expect(Money.franc(1).currency()).to(equal("CHF"))
+        }
     }
 }
