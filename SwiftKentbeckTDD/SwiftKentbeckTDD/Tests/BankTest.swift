@@ -29,5 +29,15 @@ final class BankTest: AsyncSpec {
         it("identify rate") {
             expect(Bank().rate(from: "USD", to: "USD")).to(equal(1))
         }
+
+        it("mixed addition") {
+            let fiveBucs = Money.dollor(5)
+            let tenFrancs = Money.franc(10)
+
+            let bank = Bank()
+            bank.addRate("CHF", "USD", 2)
+            let result = bank.reduce(fiveBucs.plus(tenFrancs), "USD")
+            expect(result) == Money.dollor(10)
+        }
     }
 }
