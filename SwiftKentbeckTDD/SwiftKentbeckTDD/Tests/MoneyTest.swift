@@ -23,5 +23,11 @@ final class MoneyTest: AsyncSpec {
             expect(Money.dollor(1).currency()).to(equal("USD"))
             expect(Money.franc(1).currency()).to(equal("CHF"))
         }
+
+        it("test simple addition") {
+            let sum: Money = Money.dollor(5).plus(Money.dollor(5))
+
+            expect(sum).to(equal(Money.dollor(10)))
+        }
     }
 }

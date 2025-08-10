@@ -25,6 +25,10 @@ class Money {
     func currency() -> String {
         _currency
     }
+
+    func plus(_ append: Money) -> Money {
+        Money(amount + append.amount, currency: _currency)
+    }
 }
 
 // MARK: - Equatable
