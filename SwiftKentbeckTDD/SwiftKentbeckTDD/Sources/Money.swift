@@ -10,7 +10,7 @@ class Money {
         _currency = currency
     }
 
-    func times(_ multiplier: Int) -> Money {
+    func times(_ multiplier: Int) -> Expression {
         Money(amount * multiplier, currency: _currency)
     }
 
@@ -26,7 +26,7 @@ class Money {
         _currency
     }
 
-    func plus(_ addend: Money) -> Expression {
+    func plus(_ addend: Expression) -> Expression {
         Sum(augend: self, addend: addend)
     }
 }

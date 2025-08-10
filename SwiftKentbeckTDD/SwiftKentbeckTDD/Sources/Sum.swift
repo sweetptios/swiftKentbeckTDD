@@ -1,8 +1,8 @@
 final class Sum {
-    let augend: Money
-    let addend: Money
+    let augend: Expression
+    let addend: Expression
 
-    init(augend: Money, addend: Money) {
+    init(augend: Expression, addend: Expression) {
         self.augend = augend
         self.addend = addend
     }
