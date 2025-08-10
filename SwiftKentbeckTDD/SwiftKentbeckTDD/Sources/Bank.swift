@@ -6,7 +6,9 @@ final class Bank {
     }
 
     func rate(from: String, to: String) -> Int {
-        rates[Pair(from: from, to: to)] ?? 0
+        guard from != to else { return 1 }
+
+        return rates[Pair(from: from, to: to)] ?? 0
     }
 
     func addRate(_ from: String, _ to: String, _ value: Int) {
