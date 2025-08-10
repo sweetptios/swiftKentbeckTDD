@@ -7,3 +7,7 @@ final class Sum {
         self.addend = addend
     }
 }
+
+// MARK: - Expression
+
+extension Sum: Expression {}
