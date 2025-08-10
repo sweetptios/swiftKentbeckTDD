@@ -18,6 +18,6 @@ final class Sum {
 
 extension Sum: Expression {
     func plus(_ addend: any Expression) -> any Expression {
-        return Money(0, currency: "")
+        return Sum(augend: self, addend: addend)
     }
 }
