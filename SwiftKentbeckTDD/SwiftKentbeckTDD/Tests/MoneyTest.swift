@@ -26,7 +26,7 @@ final class MoneyTest: AsyncSpec {
 
         it("test simple addition") {
             let five = Money.dollor(5)
-            let sum: Expression = five.plus(five)
+            let sum: SwiftKentbeckTDD.Expression = five.plus(five)
             let bank = Bank()
             let reduced: Money = bank.reduce(sum, "USD")
             expect(reduced).to(equal(Money.dollor(10)))

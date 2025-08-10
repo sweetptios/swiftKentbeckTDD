@@ -26,7 +26,7 @@ class Money {
         _currency
     }
 
-    func plus(_ append: Money) -> Money {
+    func plus(_ append: Money) -> Expression {
         Money(amount + append.amount, currency: _currency)
     }
 }
@@ -46,3 +46,7 @@ extension Money: CustomDebugStringConvertible {
         "\(amount) \(_currency)"
     }
 }
+
+// MARK: - Expression
+
+extension Money: Expression {}
