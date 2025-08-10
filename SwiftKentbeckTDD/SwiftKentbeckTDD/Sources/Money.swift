@@ -49,4 +49,8 @@ extension Money: CustomDebugStringConvertible {
 
 // MARK: - Expression
 
-extension Money: Expression {}
+extension Money: Expression {
+    func reduce(to currency: String) -> Money {
+        self
+    }
+}
