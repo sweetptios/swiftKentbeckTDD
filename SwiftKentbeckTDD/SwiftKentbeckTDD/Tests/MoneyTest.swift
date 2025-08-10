@@ -16,8 +16,6 @@ final class MoneyTest: AsyncSpec {
         it("test equally") {
             expect(Money.dollor(5) == Money.dollor(5)).to(beTrue())
             expect(Money.dollor(5) == Money.dollor(6)).to(beFalsy())
-            expect(Money.franc(5) == Money.franc(5)).to(beTrue())
-            expect(Money.franc(5) == Money.franc(6)).to(beFalsy())
             expect(Money.franc(5)).notTo(equal(Money.dollor(5)))
         }
 
@@ -30,10 +28,6 @@ final class MoneyTest: AsyncSpec {
         it("test currency") {
             expect(Money.dollor(1).currency()).to(equal("USD"))
             expect(Money.franc(1).currency()).to(equal("CHF"))
-        }
-
-        it("test Different Class Equality") {
-            expect(Franc(10, currency: "CHF")).to(equal(Money(10, currency: "CHF")))
         }
     }
 }
