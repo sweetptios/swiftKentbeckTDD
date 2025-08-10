@@ -1,9 +1,10 @@
 final class Franc: Money {
     override func times(_ multiplier: Int) -> Money {
-        Money.franc(amount * multiplier)
+        Franc(amount * multiplier, currency: "CHF")
     }
 
     override func currency() -> String {
         _currency
     }
 }
+  

@@ -1,6 +1,6 @@
 final class Dollor: Money {
     override func times(_ multiplier: Int) -> Money {
-        Money.dollor(amount * multiplier)
+        Dollor(amount * multiplier, currency: "USD")
     }
 
     override func currency() -> String {
