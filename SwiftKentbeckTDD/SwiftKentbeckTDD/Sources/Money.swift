@@ -1,8 +1,13 @@
 class Money {
     let amount: Int
+    let _currency: String
 
-    init(_ value: Int) {
+    init(
+        _ value: Int,
+        currency: String
+    ) {
         self.amount = value
+        _currency = currency
     }
 
     func times(_ multiplier: Int) -> Money {
@@ -10,15 +15,15 @@ class Money {
     }
 
     static func dollor(_ amount: Int) -> Money {
-        Dollor(amount)
+        Dollor(amount, currency: "")
     }
 
     static func franc(_ amount: Int) -> Money {
-        Franc(amount)
+        Franc(amount, currency: "")
     }
 
     func currency() -> String {
-        fatalError()
+        _currency
     }
 }
 
