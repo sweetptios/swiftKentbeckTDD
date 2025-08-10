@@ -31,8 +31,8 @@ final class BankTest: AsyncSpec {
         }
 
         it("mixed addition") {
-            let fiveBucs = Money.dollor(5)
-            let tenFrancs = Money.franc(10)
+            let fiveBucs: Expression = Money.dollor(5)
+            let tenFrancs: Expression = Money.franc(10)
 
             let bank = Bank()
             bank.addRate("CHF", "USD", 2)

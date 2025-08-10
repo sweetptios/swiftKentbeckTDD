@@ -16,4 +16,8 @@ final class Sum {
 
 // MARK: - Expression
 
-extension Sum: Expression {}
+extension Sum: Expression {
+    func plus(_ addend: any Expression) -> any Expression {
+        return Money(0, currency: "")
+    }
+}
