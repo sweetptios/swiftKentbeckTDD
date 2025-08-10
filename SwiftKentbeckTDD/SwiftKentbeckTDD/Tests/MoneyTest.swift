@@ -31,5 +31,9 @@ final class MoneyTest: AsyncSpec {
             expect(Money.dollor(1).currency()).to(equal("USD"))
             expect(Money.franc(1).currency()).to(equal("CHF"))
         }
+
+        it("test Different Class Equality") {
+            expect(Franc(10, currency: "CHF")).to(equal(Money(10, currency: "CHF")))
+        }
     }
 }

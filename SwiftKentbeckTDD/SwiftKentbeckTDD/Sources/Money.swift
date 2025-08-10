@@ -34,3 +34,11 @@ extension Money: Equatable {
         return lhs.amount == rhs.amount && type(of: lhs) == type(of: rhs)
     }
 }
+
+// MARK: - CustomDebugStringConvertible
+
+extension Money: CustomDebugStringConvertible {
+    var debugDescription: String {
+        "\(amount) \(_currency)"
+    }
+}
