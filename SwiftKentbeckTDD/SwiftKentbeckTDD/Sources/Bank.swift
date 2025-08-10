@@ -11,3 +11,32 @@ final class Bank {
 
     }
 }
+
+// MARK: - Pair
+
+private class Pair {
+    private let from: String
+    private let to: String
+
+    init(from: String, to: String) {
+        self.from = from
+        self.to = to
+    }
+}
+
+// MARK: - Equatable
+
+extension Pair: Equatable {
+    static func == (lhs: Pair, rhs: Pair) -> Bool {
+        lhs.from == rhs.from && lhs.to == rhs.to
+    }
+}
+
+// MARK: - Hashable
+
+extension Pair: Hashable {
+    func hash(into hasher: inout Hasher) {
+        from.hash(into: &hasher)
+        to.hash(into: &hasher)
+    }
+}
