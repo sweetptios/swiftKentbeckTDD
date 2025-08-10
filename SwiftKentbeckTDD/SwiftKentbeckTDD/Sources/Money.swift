@@ -15,11 +15,11 @@ class Money {
     }
 
     static func dollor(_ amount: Int) -> Money {
-        Dollor(amount, currency: "")
+        Dollor(amount, currency: "USD")
     }
 
     static func franc(_ amount: Int) -> Money {
-        Franc(amount, currency: "")
+        Franc(amount, currency: "CHF")
     }
 
     func currency() -> String {
