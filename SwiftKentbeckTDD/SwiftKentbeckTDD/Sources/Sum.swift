@@ -7,7 +7,7 @@ final class Sum {
         self.addend = addend
     }
 
-    func reduce(to currency: String) -> Money {
+    func reduce(_ bank: Bank, to currency: String) -> Money {
         let amount = augend.amount + addend.amount
         return Money(amount, currency: currency)
     }

@@ -50,7 +50,8 @@ extension Money: CustomDebugStringConvertible {
 // MARK: - Expression
 
 extension Money: Expression {
-    func reduce(to currency: String) -> Money {
-        self
+    func reduce(_ bank: Bank, to currency: String) -> Money {
+        let rate = bank.rate(from: _currency, to: currency)
+        return Money(amount / rate, currency: currency)
     }
 }
