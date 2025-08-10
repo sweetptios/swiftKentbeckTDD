@@ -1,5 +1,1 @@
-final class Dollor: Money {
-    override func currency() -> String {
-        _currency
-    }
-}
+final class Dollor: Money {}
