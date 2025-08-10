@@ -18,6 +18,13 @@ final class Sum {
 
 extension Sum: Expression {
     func plus(_ addend: any Expression) -> any Expression {
-        return Sum(augend: self, addend: addend)
+        Sum(augend: self, addend: addend)
+    }
+
+    func times(_ multiplier: Int) -> any Expression {
+        Sum(
+            augend: augend.times(multiplier),
+            addend: addend.times(multiplier)
+        )
     }
 }

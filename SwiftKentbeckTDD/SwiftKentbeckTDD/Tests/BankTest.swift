@@ -50,5 +50,16 @@ final class BankTest: AsyncSpec {
             let result = bank.reduce(sum, "USD")
             expect(result) == Money.dollor(15)
         }
+
+        it("sum times") {
+            let fiveBucks: Expression = Money.dollor(5)
+            let tenFrancs: Expression = Money.franc(10)
+
+            let bank = Bank()
+            bank.addRate("CHF", "USD", 2)
+            let sum = Sum(augend: fiveBucks, addend: tenFrancs).times(2)
+            let result = bank.reduce(sum, "USD")
+            expect(result) == Money.dollor(20)
+        }
     }
 }
