@@ -3,8 +3,6 @@ final class Bank {
         guard let sum = source as? Sum
         else { return Money(0, currency: to) }
 
-        let amount = sum.augend.amount + sum.addend.amount
-
-        return Money(amount, currency: to)
+        return sum.reduce(to: to)
     }
 }
