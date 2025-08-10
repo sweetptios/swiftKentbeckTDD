@@ -25,5 +25,9 @@ final class BankTest: AsyncSpec {
             let result = bank.reduce(Money.franc(2), "USD")
             expect(result) == Money.dollor(1)
         }
+
+        it("identify rate") {
+            expect(Bank().rate(from: "USD", to: "USD")).to(equal(1))
+        }
     }
 }
