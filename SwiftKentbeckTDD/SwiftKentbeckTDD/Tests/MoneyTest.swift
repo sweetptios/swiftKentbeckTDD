@@ -33,18 +33,12 @@ final class MoneyTest: AsyncSpec {
             expect(reduced).to(equal(Money.dollor(10)))
         }
 
-//        it("test plus returns sum") {
-//            let five = Money.dollor(5)
-//            let result: SwiftKentbeckTDD.Expression = five.plus(five)
-//            let sum = result as! Sum
-//            expect(sum.augend as! Money).to(equal(five))
-//            expect(sum.addend as! Money).to(equal(five))
-//        }
-
-        it("plus same curreny returns money") {
-            let sum: Expression = Money.dollor(1).plus(Money.dollor(1))
-
-            expect(sum).to(beAnInstanceOf(Money.self))
+        it("test plus returns sum") {
+            let five = Money.dollor(5)
+            let result: SwiftKentbeckTDD.Expression = five.plus(five)
+            let sum = result as! Sum
+            expect(sum.augend as! Money).to(equal(five))
+            expect(sum.addend as! Money).to(equal(five))
         }
     }
 }

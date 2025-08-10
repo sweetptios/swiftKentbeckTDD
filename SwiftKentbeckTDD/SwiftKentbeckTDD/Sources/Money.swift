@@ -52,11 +52,6 @@ extension Money: Expression {
     }
 
     func plus(_ addend: Expression) -> Expression {
-        if let addend = addend as? Money,
-            self._currency == addend.currency() {
-            return Money(amount + addend.amount, currency: _currency)
-        }
-
-        return Sum(augend: self, addend: addend)
+        Sum(augend: self, addend: addend)
     }
 }
