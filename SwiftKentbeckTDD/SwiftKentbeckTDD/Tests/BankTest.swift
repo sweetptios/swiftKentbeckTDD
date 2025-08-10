@@ -12,5 +12,11 @@ final class BankTest: AsyncSpec {
             let result = bank.reduce(sum, "USD")
             expect(result).to(equal(Money.dollor(7)))
         }
+
+        it("reduce money") {
+            let bank = Bank()
+            let result = bank.reduce(Money.dollor(1), "USD")
+            expect(result).to(equal(Money.dollor(1)))
+        }
     }
 }
