@@ -1,13 +1,18 @@
-class WasRun {
+import Foundation
+
+class WasRun: NSObject {
     let wasRun: Int?
+    let name: String
 
     init(_ name: String) {
         self.wasRun = nil
+        self.name = name
     }
 
-    func testMethod() {}
+    @objc func testMethod() {}
 
     func run() {
-        testMethod()
+        let selector = NSSelectorFromString(name)
+        perform(selector)
     }
 }
