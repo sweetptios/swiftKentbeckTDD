@@ -14,7 +14,7 @@ class TestCaseTest: TestCase {
 
     @objc func testSetUp() {
         test.run()
-        assert(1 == test.wasSetUp)
+        assert("setUp " == test.log)
     }
 }
 

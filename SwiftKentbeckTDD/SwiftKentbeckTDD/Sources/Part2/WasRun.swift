@@ -2,10 +2,10 @@ import Foundation
 
 class WasRun: TestCase {
     var wasRun: Int?
-    var wasSetUp: Int?
+    private(set) var log: String?
 
     override init(_ name: String) {
-        wasSetUp = nil
+        log = nil
 
         super.init(name)
     }
@@ -16,6 +16,6 @@ class WasRun: TestCase {
 
     @objc override func setUp() {
         wasRun = nil
-        wasSetUp = 1
+        log = "setUp "
     }
 }
