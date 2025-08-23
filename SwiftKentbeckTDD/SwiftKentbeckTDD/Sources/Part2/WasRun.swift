@@ -1,12 +1,12 @@
 import Foundation
 
-class WasRun: NSObject {
+class WasRun: TestCase {
     var wasRun: Int?
-    let name: String
 
-    init(_ name: String) {
+    override init(_ name: String) {
         self.wasRun = nil
-        self.name = name
+
+        super.init(name)
     }
 
     @objc func testMethod() {
