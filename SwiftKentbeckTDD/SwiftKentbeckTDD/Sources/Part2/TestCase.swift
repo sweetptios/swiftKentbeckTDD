@@ -6,4 +6,9 @@ class TestCase: NSObject {
     init(_ name: String) {
         self.name = name
     }
+
+    func run() {
+        let selector = NSSelectorFromString(name)
+        perform(selector)
+    }
 }

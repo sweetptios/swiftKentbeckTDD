@@ -12,9 +12,4 @@ class WasRun: TestCase {
     @objc func testMethod() {
         self.wasRun = 1
     }
-
-    func run() {
-        let selector = NSSelectorFromString(name)
-        perform(selector)
-    }
 }
