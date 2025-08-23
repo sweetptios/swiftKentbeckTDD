@@ -20,6 +20,13 @@ class TestCaseTest: TestCase {
         let result = test.run()
         assert("1 run, 1 failed" == result.summary())
     }
+
+    @objc func testFailedResultFormatting() {
+        let result = TestResult()
+        result.testStarted()
+        result.testFailed()
+        assert("1 run, 1 failed" == result.summary())
+    }
 }
 
 func doTest() {
