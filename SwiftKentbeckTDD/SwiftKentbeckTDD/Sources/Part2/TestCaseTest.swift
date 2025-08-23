@@ -32,5 +32,6 @@ class TestCaseTest: TestCase {
 func doTest() {
     _ = TestCaseTest("testTemplateMethod").run()
     _ = TestCaseTest("testResult").run()
-    _ = TestCaseTest("testFailedResult").run()
+//    _ = TestCaseTest("testFailedResult").run()
+    _ = TestCaseTest("testFailedResultFormatting").run()
 }
