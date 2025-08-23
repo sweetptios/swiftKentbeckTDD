@@ -1,7 +1,7 @@
 import Foundation
 
 class WasRun: NSObject {
-    let wasRun: Int?
+    var wasRun: Int?
     let name: String
 
     init(_ name: String) {
@@ -9,7 +9,9 @@ class WasRun: NSObject {
         self.name = name
     }
 
-    @objc func testMethod() {}
+    @objc func testMethod() {
+        self.wasRun = 1
+    }
 
     func run() {
         let selector = NSSelectorFromString(name)
