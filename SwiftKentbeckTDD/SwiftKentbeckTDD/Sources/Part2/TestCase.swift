@@ -8,10 +8,13 @@ class TestCase: NSObject {
     }
 
     @objc func setUp() {}
+    
+    @objc func tearDown() {}
 
     func run() {
         setUp()
         let selector = NSSelectorFromString(name)
         perform(selector)
+        tearDown()
     }
 }

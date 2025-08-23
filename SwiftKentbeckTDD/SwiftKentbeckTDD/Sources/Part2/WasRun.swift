@@ -12,11 +12,15 @@ class WasRun: TestCase {
 
     @objc func testMethod() {
         wasRun = 1
-        log += "testMethod"
+        log += "testMethod "
     }
 
     @objc override func setUp() {
         wasRun = nil
         log = "setUp "
+    }
+
+    @objc override func tearDown() {
+        log += "tearDown "
     }
 }
