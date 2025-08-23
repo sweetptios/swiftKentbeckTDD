@@ -30,8 +30,8 @@ class TestCaseTest: TestCase {
 }
 
 func doTest() {
-    _ = TestCaseTest("testTemplateMethod").run()
-    _ = TestCaseTest("testResult").run()
-    _ = TestCaseTest("testFailedResultFormatting").run()
-    _ = TestCaseTest("testFailedResult").run()
+    print(TestCaseTest("testTemplateMethod").run().summary())
+    print(TestCaseTest("testResult").run().summary())
+    print(TestCaseTest("testFailedResultFormatting").run().summary())
+    print(TestCaseTest("testFailedResult").run().summary())
 }
