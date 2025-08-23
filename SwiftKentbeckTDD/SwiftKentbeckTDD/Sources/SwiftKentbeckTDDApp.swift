@@ -6,7 +6,7 @@ struct SwiftKentbeckTDDApp: App {
         WindowGroup {
             ContentView()
                 .task {
-                    doWasRunTest()
+                    doTest()
                 }
         }
     }

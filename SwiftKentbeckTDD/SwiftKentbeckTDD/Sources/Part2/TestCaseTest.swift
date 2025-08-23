@@ -7,8 +7,15 @@ class TestCaseTest: TestCase {
         test.run()
         assert(1 == test.wasRun)
     }
+
+    @objc func testSetUp() {
+        let test = WasRun("testMethod")
+        test.run()
+        assert(1 == test.wasSetUp)
+    }
 }
 
-func doWasRunTest() {
+func doTest() {
     TestCaseTest("testRunning").run()
+    TestCaseTest("testSetUp").run()
 }
