@@ -7,7 +7,10 @@ class TestCase: NSObject {
         self.name = name
     }
 
+    @objc func setUp() {}
+
     func run() {
+        setUp()
         let selector = NSSelectorFromString(name)
         perform(selector)
     }

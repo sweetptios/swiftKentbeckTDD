@@ -2,14 +2,20 @@ import Foundation
 
 class WasRun: TestCase {
     var wasRun: Int?
+    var wasSetUp: Int?
 
     override init(_ name: String) {
-        self.wasRun = nil
+        wasRun = nil
+        wasSetUp = nil
 
         super.init(name)
     }
 
     @objc func testMethod() {
-        self.wasRun = 1
+        wasRun = 1
+    }
+
+    @objc override func setUp() {
+        wasSetUp = 1
     }
 }
