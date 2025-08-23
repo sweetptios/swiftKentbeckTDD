@@ -17,5 +17,6 @@ class TestCaseTest: TestCase {
 }
 
 func doTest() {
-    TestCaseTest("testTemplateMethod").run()
+    _ = TestCaseTest("testTemplateMethod").run()
+    _ = TestCaseTest("testResult").run()
 }

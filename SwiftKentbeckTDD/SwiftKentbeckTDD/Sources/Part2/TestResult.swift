@@ -2,7 +2,11 @@ class TestResult {
     private var runCount: Int
 
     init() {
-        runCount = 1
+        runCount = 0
+    }
+
+    func testStarted() {
+        runCount += 1
     }
 
     func summary() -> String {
