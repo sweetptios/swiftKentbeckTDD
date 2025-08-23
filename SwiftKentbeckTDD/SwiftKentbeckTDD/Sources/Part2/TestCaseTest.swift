@@ -27,6 +27,14 @@ class TestCaseTest: TestCase {
         result.testFailed()
         assert("1 run, 1 failed" == result.summary())
     }
+
+    @objc func testSuite() {
+        let suite = TestSuite()
+        suite.add(WasRun("testMethod"))
+        suite.add(WasRun("testBrokenMethod"))
+        let result = suite.run()
+        assert("2 run, 1 failed" == result.summary())
+    }
 }
 
 func doTest() {
