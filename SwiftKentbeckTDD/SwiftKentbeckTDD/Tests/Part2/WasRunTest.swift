@@ -1,3 +1,5 @@
+@testable import SwiftKentbeckTDD
+
 func doWantRunTest() {
     let test = WasRun("testMethod")
     print(test.wasRun)
