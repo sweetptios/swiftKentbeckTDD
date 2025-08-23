@@ -3,11 +3,8 @@ import Foundation
 class TestCaseTest: TestCase {
     var test: WasRun!
 
-    @objc override func setUp() {
-        test = WasRun("testMethod")
-    }
-
     @objc func testTemplateMethod() {
+        test = WasRun("testMethod")
         test.run()
         assert("setUp testMethod" == test.log)
     }
