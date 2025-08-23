@@ -11,10 +11,12 @@ class TestCase: NSObject {
     
     @objc func tearDown() {}
 
-    func run() {
+    func run() -> TestResult {
         setUp()
         let selector = NSSelectorFromString(name)
         perform(selector)
         tearDown()
+
+        return TestResult()
     }
 }
