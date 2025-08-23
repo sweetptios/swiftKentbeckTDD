@@ -7,18 +7,12 @@ class TestCaseTest: TestCase {
         test = WasRun("testMethod")
     }
 
-    @objc func testRunning() {
-        test.run()
-        assert(1 == test.wasRun)
-    }
-
-    @objc func testSetUp() {
+    @objc func testTemplateMethod() {
         test.run()
         assert("setUp testMethod" == test.log)
     }
 }
 
 func doTest() {
-    TestCaseTest("testRunning").run()
-    TestCaseTest("testSetUp").run()
+    TestCaseTest("testTemplateMethod").run()
 }
