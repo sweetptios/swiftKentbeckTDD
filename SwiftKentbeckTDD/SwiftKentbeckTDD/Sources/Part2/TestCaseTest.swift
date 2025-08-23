@@ -8,6 +8,12 @@ class TestCaseTest: TestCase {
         test.run()
         assert("setUp testMethod tearDown " == test.log)
     }
+
+    @objc func testResult() {
+        test = WasRun("testMethod")
+        let result = test.run()
+        assert("1 run, 0 failed" == result.summary())
+    }
 }
 
 func doTest() {
