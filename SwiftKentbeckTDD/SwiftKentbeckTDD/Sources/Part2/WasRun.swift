@@ -13,6 +13,10 @@ class WasRun: TestCase {
         log += "testMethod "
     }
 
+    @objc func testBrokenMethod() throws {
+        throw NSError()
+    }
+
     @objc override func setUp() {
         log = "setUp "
     }
