@@ -15,8 +15,15 @@ class TestCase: NSObject {
         let result = TestResult()
         result.testStarted()
         setUp()
+
         let selector = NSSelectorFromString(name)
-        perform(selector)
+
+        do {
+            try ObjCInvoker.perform(selector, on: self)
+        } catch {
+            result.testFailed()
+        }
+
         tearDown()
 
         return result
