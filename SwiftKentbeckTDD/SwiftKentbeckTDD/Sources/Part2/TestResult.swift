@@ -1,5 +1,11 @@
 class TestResult {
+    private var runCount: Int
+
+    init() {
+        runCount = 1
+    }
+
     func summary() -> String {
-        "1 run, 0 failed"
+        "\(runCount) run, 0 failed"
     }
 }
