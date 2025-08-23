@@ -5,6 +5,9 @@ struct SwiftKentbeckTDDApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    doWasRunTest()
+                }
         }
     }
 }
