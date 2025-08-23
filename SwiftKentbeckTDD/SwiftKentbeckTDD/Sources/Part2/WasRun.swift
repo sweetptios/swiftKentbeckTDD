@@ -5,7 +5,6 @@ class WasRun: TestCase {
     var wasSetUp: Int?
 
     override init(_ name: String) {
-        wasRun = nil
         wasSetUp = nil
 
         super.init(name)
@@ -16,6 +15,7 @@ class WasRun: TestCase {
     }
 
     @objc override func setUp() {
+        wasRun = nil
         wasSetUp = 1
     }
 }
