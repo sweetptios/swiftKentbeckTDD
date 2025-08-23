@@ -5,19 +5,21 @@ class TestCaseTest: TestCase {
 
     @objc func testTemplateMethod() {
         test = WasRun("testMethod")
-        test.run()
+        test.run(TestResult())
         assert("setUp testMethod tearDown " == test.log)
     }
 
     @objc func testResult() {
         test = WasRun("testMethod")
-        let result = test.run()
+        let result = TestResult()
+        test.run(result)
         assert("1 run, 0 failed" == result.summary())
     }
 
     @objc func testFailedResult() {
         test = WasRun("testBrokenMethod")
-        let result = test.run()
+        let result = TestResult()
+        test.run(result)
         assert("1 run, 1 failed" == result.summary())
     }
 
@@ -32,14 +34,20 @@ class TestCaseTest: TestCase {
         let suite = TestSuite()
         suite.add(WasRun("testMethod"))
         suite.add(WasRun("testBrokenMethod"))
-        let result = suite.run()
+        let result = TestResult()
+        suite.run(result)
         assert("2 run, 1 failed" == result.summary())
     }
 }
 
 func doTest() {
-    print(TestCaseTest("testTemplateMethod").run().summary())
-    print(TestCaseTest("testResult").run().summary())
-    print(TestCaseTest("testFailedResultFormatting").run().summary())
-    print(TestCaseTest("testFailedResult").run().summary())
+    let suite = TestSuite()
+    suite.add(TestCaseTest("testTemplateMethod"))
+    suite.add(TestCaseTest("testResult"))
+    suite.add(TestCaseTest("testFailedResultFormatting"))
+    suite.add(TestCaseTest("testFailedResult"))
+    suite.add(TestCaseTest("testSuite"))
+    let result = TestResult()
+    suite.run(result)
+    print(result.summary())
 }

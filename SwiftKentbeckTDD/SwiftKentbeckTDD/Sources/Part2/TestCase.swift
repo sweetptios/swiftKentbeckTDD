@@ -11,8 +11,7 @@ class TestCase: NSObject {
     
     @objc func tearDown() {}
 
-    func run() -> TestResult {
-        let result = TestResult()
+    func run(_ result: TestResult) {
         result.testStarted()
         setUp()
 
@@ -25,7 +24,5 @@ class TestCase: NSObject {
         }
 
         tearDown()
-
-        return result
     }
 }
