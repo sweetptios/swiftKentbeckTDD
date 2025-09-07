@@ -188,3 +188,10 @@ public Expression plus(Expression addend) {
 “여기에는 상당한 중복이 있다.  
 만약 테스트 클래스를 주면 자동으로 수트를 구성할 수 있는 방법이 있다면, 그 중복을 없앨 수 있을 것이다.”
 
+## Section 3 - Patterns
+> 보다 정확한 이해를 위해 원서로 학습하고 내용을 정리하고 있습니다.
+
+[25 테스트 주도 개발 패턴](https://sweetptios.notion.site/25-2665cb26632680beb903dff60e030141?source=copy_link)
+
+[26 빨간 막대 패턴](https://sweetptios.notion.site/26-2665cb26632680019d1bcefbcd7f5f46?source=copy_link)
+
